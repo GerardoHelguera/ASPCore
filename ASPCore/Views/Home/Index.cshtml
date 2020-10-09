@@ -1,0 +1,61 @@
+﻿@model MaestrosModel
+
+@{
+    ViewData["Title"] = "Pagina de Maestros";
+}
+
+<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th width="100px">
+                        <b>Matriula</b>
+                    </th>
+
+                    <th width="100px">
+                        <b>Nombre</b>
+                    </th>
+                    <th width="180px">
+                        <b>Apellido Paterno</b>
+                    </th>
+                    <th width="180px">
+                        <b>Apellido Materno</b>
+                    </th>
+                    <th width="180px">
+                        <b>Hora de Entrada</b>
+                    </th>
+                    <th width="180px">
+                        <b>Hora de Salida</b>
+                    </th>
+
+                </tr>
+            </thead>
+            @foreach(MaestrosModel maestros in(MaestrosModel[])ViewBag.maestros)
+            { 
+            <tr>
+                <td>
+                    @maestros.Matricula
+                </td>
+                <td>
+                    @maestros.Nombre
+                </td>
+                <td>
+                    @maestros.Apellido_P
+                </td>
+                <td>
+                    @maestros.Apellido_M
+                </td>
+                <td>
+                    @maestros.Hora_Entrada
+                </td>
+                <td>
+                    @maestros.Hora_Salida
+                </td>
+            </tr>
+            }
+
+
+        </table>
+ 
+</div>
